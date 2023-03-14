@@ -1,0 +1,85 @@
+Owner: Raiyyan Siddiqui
+Uses code created by Daniel B. Christofani
+This project is open source. Re-distribution and modification allowed provided that proper credit is given
+
+
+Brainfuck stats:
+
+ASCII encodings:
+91: [
+93: ]
+
+46: .
+44: ,
+43: +
+45: -
+
+62: >
+60: <
+33: !
+
+ordered
+33: !
+43: +     = 33+10
+44: ,     = 43+1
+45: -     = 44+1
+46: .     = 45+1
+60: <     = 46+14
+62: >     = 60+2
+91: [     = 62+29
+92: ]     = 91+1
+
+
+Here are some sample programs, I am the owner/creator of the first 2, the 3rd is made by Daniel B. Christofani
+//PROGRAM #1
+,++.>,++.!OP
+//PROGRAM #2
+THIS PROGRAM REQUIRES YOU INPUT ONE CAPITAL LETTER DEPENDING ON THE INPUT MODE SELECTED
+IT TAKES THAT LETTER AND PRINTS ALL THE LETTERS BACKWARDS
+
+,Z
+>> ++++++++     PUTS A IN SECOND SO SUBTRACTION WORKS
+[
+   <
+   ++++++++
+   > -
+]  <+
+<
+>
+[              SUBTRACTS ONE FROM BOTH SO OFFSET ON CHARACTER IS FOUND
+  -<->
+]              
+<
+[             COPIES OFFSET TO SECOND AND THIRD
+  >+
+  >+
+  << -
+]
+
+>>> ++++++++
+[             ADDS A TO OFFSET IN THIRD CELL
+   <
+   ++++++++
+   > -
+]  <+
+<<
+
+>
+[             SUBTRACTS BOTH OFFSET IN SECOND CELL AND CHARACTER IN THIRD CELL PRINTING THIRD CELL
+              UNTIL THE SECOND CELL OFFSET VALUE REACHES ZERO
+  >.-
+  <-
+]
+>.
+
+
+//PROGRAM #3
+,[->+>+<<]>>[-<<+>>] +++++++++++++[<<----->>-]<.<[->-.<] !YY
+
+//PROGRAM #4 Daniel B. Cristofani's DBFI : Brainfuck Self Interpreter
+>>>+[[-]>>[-]++>+>+++++++[<++++>>++<-]++>>+>+>+++++[>++>++++++<<-]+>>>,<++[[>[
+->>]<[>>]<<-]<[<]<+>>[>]>[<+>-[[<+>-]>]<[[[-]<]++<-[<+++++++++>[<->-]>>]>>]]<<
+]<]<[[<]>[[>]>>[>>]+[<<]<[<]<+>>-]>[>]+[->>]<<<<[[<<]<[<]+<<[+>+<<-[>-->+<<-[>
++<[>>+<<-]]]>[<+>-]<]++>>-->[>]>>[>>]]<<[>>+<[[<]<]>[[<<]<[<]+[-<+>>-[<<+>++>-
+[<->[<<+>>-]]]<[>+<-]>]>[>]>]>[>>]>>]<<[>>+>>+>>]<<[->>>>>>>>]<<[>.>>>>>>>]<<[
+>->>>>>]<<[>,>>>]<<[>+>]<<[+<<]<]
